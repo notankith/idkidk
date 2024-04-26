@@ -1,22 +1,29 @@
-<!-- index.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sticker Printing App</title>
-    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sticker Maker</title>
+  <!-- Include Tailwind CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
 </head>
-<body class="bg-gray-100">
-    <div class="container mx-auto mt-8">
-        <h1 class="text-3xl font-bold mb-4">Sticker Printing App</h1>
-        <form id="stickerForm" class="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4">
-            <!-- Sticker Form Fields -->
-        </form>
-        <div id="stickerList"></div> <!-- Container for displaying added stickers -->
-    </div>
+<body>
+  <div class="container mx-auto">
+    <h1 class="text-3xl font-bold text-center mt-8 mb-4">Sticker Maker</h1>
+    <!-- Input fields for sticker information -->
+    <input type="text" id="productCode" placeholder="Product Code" class="block w-full mb-2 p-2 border rounded">
+    <input type="text" id="productName" placeholder="Product Name" class="block w-full mb-2 p-2 border rounded">
+    <input type="date" id="expiry" class="block w-full mb-2 p-2 border rounded">
+    <input type="number" id="mrp" placeholder="MRP" class="block w-full mb-2 p-2 border rounded">
+    <input type="text" id="contact" placeholder="Contact" class="block w-full mb-2 p-2 border rounded">
+    <button id="saveButton" class="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded">Save Sticker</button>
 
-    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-    <script src="app.js"></script>
+    <!-- Display area for saved stickers -->
+    <div id="savedStickers" class="mt-8"></div>
+  </div>
+
+  <script src="script.js"></script>
 </body>
 </html>
+S
