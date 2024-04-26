@@ -7,7 +7,7 @@ const app = express();
 const PORT = process.env.PORT || 3000;
 
 // Connect to MongoDB
-mongoose.connect('mongodb+srv://jadenr4545:love@cluster0.apgwp9x.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0', {
+mongoose.connect('mongodb://localhost:27017/stickers', {
     useNewUrlParser: true,
     useUnifiedTopology: true
 });
@@ -42,7 +42,6 @@ app.post('/api/stickers', (req, res) => {
             console.error(err);
             res.status(500).send('Internal Server Error');
         } else {
-            console.log('Sticker added:', sticker);
             res.status(201).json(sticker);
         }
     });
