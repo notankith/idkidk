@@ -21,7 +21,6 @@ document.addEventListener('DOMContentLoaded', function () {
 
         axios.post('/api/stickers', stickerData)
             .then(function (response) {
-                console.log(response.data);
                 // Clear form fields after successful submission
                 stickerForm.reset();
                 // Add the new sticker to the sticker list
